@@ -13,7 +13,7 @@ URL_JKDK_APPLY = 'http://ehallapp.nju.edu.cn/xgfw/sys/yqfxmrjkdkappnju/apply/sav
 
 auth = NjuUiaAuth()
 
-if __name__ == "__main__":
+def main():
     load_dotenv(verbose=True)
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
@@ -68,4 +68,9 @@ if __name__ == "__main__":
             os._exit(0)
 
     log.error("打卡失败，请尝试手动打卡")
-    os._exit(-1)
+
+if __name__ == "__main__":
+    while(True):
+        main()
+       
+            
